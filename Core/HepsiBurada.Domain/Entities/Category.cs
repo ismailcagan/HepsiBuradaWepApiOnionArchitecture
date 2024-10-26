@@ -4,17 +4,13 @@ namespace HepsiBurada.Domain.Entities
 {
     public class Category : EntityBase
     {
-        public Category()
-        {
-            
-        }
+        public Category() {   }
         public Category(int parendId, string name, int priorty)
         {
             ParendId = parendId;
             Name = name;
             Priorty = priorty;
         }
-
         public required int ParendId { get; set; }
         public required string Name { get; set; }
         public required int Priorty { get; set; }
