@@ -1,4 +1,5 @@
-﻿using HepsiBurada.Persistence.Context;
+﻿using HepsiBurada.Application.Interface.Repositories;
+using HepsiBurada.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,8 @@ namespace HepsiBurada.Persistence
         {
             services.AddDbContext<AppDbContext>(opt =>
                 opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped(typeof(IReadRepository<>), typeof(IReadRepository<>));
         }
     }
 }

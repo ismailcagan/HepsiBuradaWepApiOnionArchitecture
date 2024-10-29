@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\HepsiBurada.Application\HepsiBurada.Application.csproj" />
     <ProjectReference Include="..\..\Core\HepsiBurada.Domain\HepsiBurada.Domain.csproj" />
   </ItemGroup>
 
