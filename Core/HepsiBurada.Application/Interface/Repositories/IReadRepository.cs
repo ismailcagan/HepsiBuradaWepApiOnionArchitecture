@@ -35,6 +35,5 @@ namespace HepsiBurada.Application.Interface.Repositories
 
         // bir tablonun sayısını vb. bulmak için kullanıldı.
         Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null);
-
     }
 }
