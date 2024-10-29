@@ -95,7 +95,7 @@ namespace HepsiBurada.Persistence.Repositories
         public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
         {
             Table.AsNoTracking();
-            if(predicate is not null)
+            if (predicate is not null)
             {
                 Table.Where(predicate);
             }
