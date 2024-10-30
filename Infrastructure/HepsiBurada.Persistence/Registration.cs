@@ -1,6 +1,8 @@
 ﻿using HepsiBurada.Application.Interface.Repositories;
+using HepsiBurada.Application.Interface.UnitOfWorks;
 using HepsiBurada.Persistence.Context;
 using HepsiBurada.Persistence.Repositories;
+using HepsiBurada.Persistence.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +21,8 @@ namespace HepsiBurada.Persistence
 
             // GenericRepository IWriteRepository
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+            // UnitOfWork
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
         }
     }
 }
